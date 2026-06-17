@@ -152,7 +152,7 @@ Sends email notifications when a student's turn arrives.
 ## Author
 
 Bhuvanendra Velde
-
+www.linkedin.com/in/velde-bhuvanendra-2a699b290
 ## License
 
 This project was developed for academic and educational purposes.
