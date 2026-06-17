@@ -1,0 +1,91 @@
+/* Admin dashboard page only (below top bar) */
+.app-main:has(.admin-page){
+  align-items:stretch;
+  padding:6px 6px 14px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-y:contain;
+  scrollbar-gutter:stable;
+}
+
+.admin-page{
+  flex:1 1 auto;
+  width:100%;
+  min-height:0;
+  display:flex;
+  justify-content:center;
+  padding:8px 4px 16px;
+  box-sizing:border-box;
+  background:linear-gradient(180deg,#f7fafc 0%,#eef2f7 100%);
+}
+
+.admin-dashboard{
+  width:100%;
+  max-width:min(1400px,100%);
+  padding:14px 10px 16px;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  background:#ffffff;
+  box-shadow:0 10px 26px rgba(15,23,42,0.08),0 2px 6px rgba(15,23,42,0.04);
+  box-sizing:border-box;
+}
+
+.dash-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:10px;
+  margin-bottom:14px;
+}
+
+.admin-title{
+  margin:0;
+  font-size:1.3rem;
+  font-weight:700;
+  line-height:1.2;
+  color:#0f172a;
+  letter-spacing:-0.02em;
+}
+
+.dash-content{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.admin-dashboard .error{
+  color:#b91c1c;
+  font-weight:600;
+}
+
+@media (max-width:900px){
+  .admin-title{
+    font-size:1.15rem;
+  }
+}
+
+@media (max-width:600px){
+  .app-main:has(.admin-page){
+    padding:2px 8px 10px;
+    scrollbar-gutter:auto;
+  }
+
+  .admin-page{
+    padding:8px 0 14px;
+  }
+
+  .admin-dashboard{
+    border-radius:12px;
+    padding:12px 8px 14px;
+    box-shadow:0 6px 18px rgba(15,23,42,0.08);
+  }
+
+  .dash-header{
+    margin-bottom:10px;
+  }
+
+  .admin-title{
+    font-size:1rem;
+  }
+}

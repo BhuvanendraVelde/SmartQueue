@@ -1,0 +1,98 @@
+:root{
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#0057b7;
+}
+.body-root{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);margin:0;color:#111}
+.header{background:linear-gradient(90deg,#0b4f9f,#0b6fb0);color:white;padding:8px 0}
+.header-inner{max-width:1100px;margin:0 auto;padding:4px 12px;display:flex;align-items:center;justify-content:space-between}
+.header-brand{display:flex;flex-direction:row;align-items:center;gap:12px;min-width:0}
+.header-brand-text{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.brand-logo{flex-shrink:0;width:48px;height:48px;border-radius:8px;object-fit:cover}
+.header-actions{display:flex;align-items:center;gap:8px}
+.title{margin:0;font-size:20px;line-height:1.2}
+.subtitle{margin:2px 0 0;font-size:13px;opacity:0.95;line-height:1.25}
+/* keep legacy container styles but compact for single-screen */
+.container{display:flex;justify-content:center;padding:10px}
+.card{width:100%;max-width:920px;background:var(--card);border-radius:6px;box-shadow:0 4px 12px rgba(16,24,40,.06);padding:12px;display:grid;grid-template-columns:220px 1fr;gap:12px}
+
+@media(max-width:800px){
+  .card{grid-template-columns:1fr;}
+}
+
+.btn{padding:8px 14px;border-radius:6px;border:0;background:#e6e7ea}
+.btn-primary{background:var(--accent);color:white}
+.btn-ghost{background:transparent;border:1px solid #ddd}
+.link-button{background:transparent;color:var(--accent);border:0;padding:6px 0}
+
+/* QR layout tweaks for admin button */
+.qr-inner{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:920px;padding:12px}
+.qr-top{width:100%;display:flex;justify-content:space-between;align-items:center}
+.admin-login-btn{background:transparent;border:1px solid rgba(255,255,255,0.18);padding:8px 12px;border-radius:8px;color:white;text-decoration:none;font-weight:600}
+.admin-login-btn:hover{background:rgba(255,255,255,0.05)}
+.header .admin-login-btn{box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+.admin-login-btn:active{transform:translateY(1px)}
+
+/* Logout button (styled to match login but as a button) */
+.admin-logout-btn{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);padding:8px 12px;border-radius:8px;color:white;font-weight:600;cursor:pointer}
+.admin-logout-btn:hover{background:rgba(255,255,255,0.18)}
+.header .admin-logout-btn{box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+.admin-logout-btn:active{transform:translateY(1px)}
+
+/* Full screen QR centering — landing area only (header unchanged) */
+.qr-only.full-screen-qr{
+  background:radial-gradient(ellipse 85% 65% at 50% 38%,#e4ebf5 0%,var(--bg) 52%,#e6eaef 100%);
+}
+.full-screen-qr{position:fixed;left:0;right:0;top:64px;bottom:0;display:flex;align-items:center;justify-content:center;padding:20px 16px;z-index:0}
+.qr-only .qr-inner{
+  width:100%;
+  max-width:400px;
+  gap:20px;
+  padding:28px 20px 36px;
+}
+.qr-copy{text-align:center;width:100%}
+.qr-title{
+  margin:0;
+  font-size:1.625rem;
+  font-weight:700;
+  color:#0f172a;
+  letter-spacing:-0.02em;
+  line-height:1.2;
+}
+.qr-card-center{
+  background:linear-gradient(180deg,#fff 0%,#f8fafc 100%);
+  padding:18px;
+  border-radius:16px;
+  border:1px solid rgba(11,79,159,0.14);
+  box-shadow:0 4px 28px rgba(11,79,159,0.1),0 1px 3px rgba(15,23,42,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.qr-card-center .qr-image{display:block;border-radius:10px}
+.qr-image{width:min(58vmin,280px);height:auto}
+.qr-hint{
+  margin:0;
+  text-align:center;
+  font-size:0.9375rem;
+  color:#475569;
+  line-height:1.5;
+  max-width:320px;
+}
+.qr-sub{
+  margin:0;
+  text-align:center;
+  font-size:0.75rem;
+  font-weight:600;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+
+@media(max-width:480px){
+  .full-screen-qr{top:56px;padding:16px 12px}
+  .qr-only .qr-inner{padding:20px 14px 28px;gap:16px}
+  .qr-title{font-size:1.4rem}
+  .qr-image{width:min(70vmin,260px)}
+}

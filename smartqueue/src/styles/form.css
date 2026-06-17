@@ -1,0 +1,155 @@
+/* Student form area only (below top bar) */
+/* Form route: align main to top so the card sits under the header (not vertically centered). */
+.app-main:has(.form-section){
+  align-items:flex-start;
+  padding:4px 8px 12px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-y:contain;
+  scrollbar-gutter:stable;
+}
+
+.form-section{
+  min-height:100%;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:8px 16px 24px;
+  background:linear-gradient(180deg,#f7fafc 0%,#eef2f7 100%);
+  overflow-x:hidden;
+  overflow-y:visible;
+  box-sizing:border-box;
+}
+
+.form-card{
+  width:100%;
+  max-width:100%;
+  max-width:560px;
+  margin:0 auto;
+  padding:14px 18px 16px;
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  box-shadow:0 10px 26px rgba(15,23,42,0.08),0 2px 6px rgba(15,23,42,0.04);
+  box-sizing:border-box;
+}
+
+.form-title{
+  text-align:center;
+  margin-bottom:12px;
+}
+
+.form-title h2{
+  margin:4px 0 0;
+  font-size:30px;
+  font-weight:700;
+  line-height:1.2;
+  color:#0f172a;
+}
+
+.form-date{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.queue-form label{
+  display:block;
+  margin-bottom:10px;
+  font-size:14px;
+  font-weight:600;
+  color:#111827;
+}
+
+.queue-form input,
+.queue-form select,
+.queue-form textarea{
+  width:100%;
+  padding:10px 12px;
+  margin-top:6px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  background:#fff;
+  font-size:14px;
+  box-sizing:border-box;
+  transition:border-color .15s ease, box-shadow .15s ease;
+}
+
+.queue-form input:focus,
+.queue-form select:focus,
+.queue-form textarea:focus{
+  outline:none;
+  border-color:#0b6fb0;
+  box-shadow:0 0 0 3px rgba(11,111,176,.15);
+}
+
+.queue-form textarea{
+  min-height:88px;
+  resize:vertical;
+}
+
+.form-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:8px;
+  margin-top:10px;
+}
+
+.error{
+  color:#b91c1c;
+  font-size:13px;
+  margin-top:6px;
+  font-weight:500;
+}
+
+@media (max-width:600px){
+  .app-main:has(.form-section){
+    padding:2px 8px 10px;
+    scrollbar-gutter:auto;
+  }
+
+  .form-section{
+    padding:6px 12px 20px;
+  }
+
+  .form-card{
+    margin-top:0;
+    padding:12px 12px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(15,23,42,0.08);
+  }
+
+  .form-title{
+    margin-bottom:10px;
+  }
+
+  .form-title h2{
+    font-size:22px;
+  }
+
+  .queue-form label{
+    margin-bottom:8px;
+    font-size:13px;
+  }
+
+  .queue-form input,
+  .queue-form select,
+  .queue-form textarea{
+    padding:9px 10px;
+    font-size:13px;
+  }
+
+  .queue-form textarea{
+    min-height:74px;
+  }
+
+  .form-actions{
+    flex-direction:column-reverse;
+  }
+
+  .form-actions .btn{
+    width:100%;
+  }
+}
