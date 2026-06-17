@@ -141,12 +141,14 @@ Sends email notifications when a student's turn arrives.
 
 ### Admin Dashboard
 
-<img width="1892" height="758" alt="AdminDashBoard" src="https://github.com/user-attachments/assets/e242c917-f09d-4543-a6ee-1b1aeba0442a" />
+<img width="1600" height="640" alt="AdminDashBoard" src="https://github.com/user-attachments/assets/cc6a4ad1-5ad0-44ad-a9fd-399f463d816b" />
+
 
 
 ### Email Notification
 
-<img width="1303" height="672" alt="EmailNotification" src="https://github.com/user-attachments/assets/f06c73e2-8b1c-428b-82ab-681023670a2b" />
+<img width="1302" height="672" alt="WhatsApp Image 2026-06-18 at 00 29 26 (1)" src="https://github.com/user-attachments/assets/cb9e6009-ba35-4bef-a424-cf386e62fe05" />
+
 
 
 ## Author
